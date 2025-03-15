@@ -191,10 +191,10 @@ namespace _2_14fi_aknakereso_wpf
                 }
                 MessageBox.Show("Gratulálok, nyertél!");
             }
-
-            if((string)originalLabel.Content == "P")
+            if(originalLabel.Content == "P")    // hibát dob, ha számra még egyszer kattintok - (string) nélkül jó
             {
                 originalLabel.Content = "";
+                flagNum--;
             }
             if (matrix[row, col] > 0)
             {
